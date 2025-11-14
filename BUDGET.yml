@@ -1,0 +1,22 @@
+# Economic Circuit Breaker - Budget Configuration
+# Miyabiプロジェクトのコスト監視設定
+
+# 月間予算（USD）
+monthly_budget_usd: 10.00
+
+# アラート閾値
+thresholds:
+  warning: 0.7      # 70%で警告
+  emergency: 0.9    # 90%で緊急停止
+
+# 監視対象
+services:
+  - name: "GitHub Actions"
+    enabled: true
+  - name: "Anthropic API"
+    enabled: true
+
+# 通知設定
+notifications:
+  create_issue: true
+  email: false
