@@ -1,16 +1,17 @@
 name: Deploy GitHub Pages
 
 # Deploy dashboard to GitHub Pages
+# DISABLED: Requires scripts/generate-dashboard-data.ts to be implemented
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'docs/**'
-      - '.github/workflows/deploy-pages.yml'
-  schedule:
-    - cron: '0 */6 * * *'  # Every 6 hours
-  workflow_dispatch:  # Manual trigger
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - 'docs/**'
+  #     - '.github/workflows/deploy-pages.yml'
+  # schedule:
+  #   - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:  # Manual trigger only
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
